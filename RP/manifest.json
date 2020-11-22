@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Ronoaldo",
+        "description": "Ronoaldo sample mod pack - Resources.",
+        "uuid": "a08e6e85-2439-4b9a-a8da-de976576aef6",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            14,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "bf42e32b-07d8-4476-bc6f-9696e0a120ed",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}
