@@ -7,7 +7,8 @@
             "register_to_creative_menu": true
         },
         "components": {
-            "minecraft:destroy_time": 3,
+            "minecraft:loot": "loot_tables/blocks/lucky_block.json",
+            "minecraft:destroy_time": 0.6,
             "minecraft:explosion_resistance": 3,
             "minecraft:friction": 0.6,
             "minecraft:flammable": {

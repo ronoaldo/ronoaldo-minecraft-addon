@@ -1,7 +1,7 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Ronoaldo",
+        "name": "Ronoaldo Behavior Pack",
         "description": "Ronoaldo sample mod pack - Behavior",
         "uuid": "06f384ff-4635-4b1c-9317-fc6d9a1497aa",
         "version": [
@@ -19,16 +19,6 @@
         {
             "type": "data",
             "uuid": "62a4f713-0070-4273-aade-d976a94d31a0",
-            "version": [
-                1,
-                0,
-                0
-            ]
-        }
-    ],
-    "dependencies": [
-        {
-            "uuid": "a08e6e85-2439-4b9a-a8da-de976576aef6",
             "version": [
                 1,
                 0,
