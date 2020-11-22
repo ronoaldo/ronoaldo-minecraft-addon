@@ -4,8 +4,8 @@
     1,
     0
   ],
-  "ronoaldo:ronoaldo": {
-    "textures": "ronoaldo",
-    "sound": "stone"
+  "rono:lucky": {
+    "textures": "lucky",
+    "sound": "glass"
   }
 }

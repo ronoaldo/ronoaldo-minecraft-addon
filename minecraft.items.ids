@@ -122,7 +122,6 @@ minecraft:brewing_stand
 minecraft:cauldron
 minecraft:ender_eye
 minecraft:speckled_melon
-minecraft:spawn_egg
 minecraft:experience_bottle
 minecraft:fireball
 minecraft:writable_book
@@ -177,7 +176,6 @@ minecraft:banner_pattern
 minecraft:dragon_breath
 minecraft:splash_potion
 minecraft:lingering_potion
-minecraft:sparkler
 minecraft:command_block_minecart
 minecraft:elytra
 minecraft:shulker_shell
