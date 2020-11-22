@@ -13,19 +13,19 @@ $(LUCKY_LOOT): $(LUCKY_LOOT_CSV)
 	echo '{ "pools": [ { "rolls": 2, "entries": [' > $(LUCKY_LOOT)
 	cat $(LUCKY_LOOT_CSV) | tr ',' ' ' | grep -v ^category | while read cat name chance perc ; do\
 		echo "Item $$name/ $$cat with drop $$chance";\
-		echo -n "  {\"type\": \"item\", \"name\": \"$$name\", \"weight\": $$chance, " >> $(LUCKY_LOOT);\
+		echo "  {\"type\": \"item\", \"name\": \"$$name\", \"weight\": $$chance, " >> $(LUCKY_LOOT);\
 		case $$name in \
 			*diamond*) \
-				echo '    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]' >> $(LUCKY_LOOT) ;;\
+				echo '   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]' >> $(LUCKY_LOOT) ;;\
 			*sword*|*helmet*|*chestplate*|*leggins*) \
-				echo '    "functions": [' >> $(LUCKY_LOOT) ;\
-				echo '       { "function": "set_count", "count": { "min": 1, "max": 1 } } ,' >> $(LUCKY_LOOT) ;\
-				echo '       { "function": "enchant_randomly" }' >> $(LUCKY_LOOT) ;\
-				echo '    ]' >> $(LUCKY_LOOT) ;;\
+				echo '   "functions": [' >> $(LUCKY_LOOT) ;\
+				echo '     { "function": "set_count", "count": { "min": 1, "max": 1 } } ,' >> $(LUCKY_LOOT) ;\
+				echo '     { "function": "enchant_randomly" }' >> $(LUCKY_LOOT) ;\
+				echo '   ]' >> $(LUCKY_LOOT) ;;\
 			*carrot*|*apple*)\
-				echo '    "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]' >> $(LUCKY_LOOT) ;;\
+				echo '   "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]' >> $(LUCKY_LOOT) ;;\
 			*) \
-				echo '    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]' >> $(LUCKY_LOOT) ;;\
+				echo '   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]' >> $(LUCKY_LOOT) ;;\
 		esac; \
 		echo '  },' >> $(LUCKY_LOOT) ;\
 	done
