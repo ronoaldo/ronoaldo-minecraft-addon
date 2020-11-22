@@ -14,10 +14,10 @@ $(LUKY_LOOT):
 	cat minecraft.items.ids | while read item ; do \
 		echo -n "  {\"type\": \"item\", \"name\": \"$$item\", " >> $(LUKY_LOOT);  \
 		case $$item in \
-			*diamond*)                                echo '\"weight\":  1,' >> $(LUKY_LOOT) ;;\
-			*sword*|*helmet*|*chestplate*|*leggins*)  echo '\"weight\": 20,' >> $(LUKY_LOOT) ;;\
-			*ore*|*apple*)                            echo '\"weight\": 12,' >> $(LUKY_LOOT) ;;\
-			*)                                        echo '\"weight\":  9,' >> $(LUKY_LOOT) ;;\
+			*diamond*)                                echo '"weight":  1,' >> $(LUKY_LOOT) ;;\
+			*sword*|*helmet*|*chestplate*|*leggins*)  echo '"weight": 20,' >> $(LUKY_LOOT) ;;\
+			*ore*|*apple*)                            echo '"weight": 12,' >> $(LUKY_LOOT) ;;\
+			*)                                        echo '"weight":  9,' >> $(LUKY_LOOT) ;;\
 		esac; \
 		echo '    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]' >> $(LUKY_LOOT) ; \
 		echo '  },' >> $(LUKY_LOOT) ; \
