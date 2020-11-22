@@ -6,8 +6,7 @@ build: clean $(LUKY_LOOT)
 	zip -r build/$(PACKAGE)-$(VERSION).mcaddon RP BP
 
 clean:
-	rm -vf build/*
-	rm $(LUKY_LOOT)
+	rm -vf build/* $(LUKY_LOOT)
 
 $(LUKY_LOOT):
 	echo '{ "pools": [ { "rolls": 1, "entries": [' > $(LUKY_LOOT)
