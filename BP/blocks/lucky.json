@@ -4,8 +4,7 @@
         "description": {
             "identifier": "rono:lucky",
             "is_experimental": true,
-            "register_to_creative_menu": true,
-            "category": "Construction"
+            "register_to_creative_menu": true
         },
         "components": {
             "minecraft:loot": "loot_tables/blocks/lucky.json",
