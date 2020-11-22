@@ -35,9 +35,6 @@
   {"type": "item", "name": "minecraft:blaze_rod", "weight": 100, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
-  {"type": "item", "name": "minecraft:bleach", "weight": 100, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
-  },
   {"type": "item", "name": "minecraft:boat", "weight": 100, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
@@ -141,7 +138,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:horsearmordiamond", "weight": 100, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:horsearmorgold", "weight": 100, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -150,9 +147,6 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:horsearmorleather", "weight": 100, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
-  },
-  {"type": "item", "name": "minecraft:ice_bomb", "weight": 100, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:kelp", "weight": 100, 
@@ -249,7 +243,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond", "weight": 300, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:emerald", "weight": 300, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -282,7 +276,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:apple", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:baked_potato", "weight": 600, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -300,7 +294,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:carrot", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:chicken", "weight": 600, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -375,13 +369,13 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_apple", "weight": 500, 
-   "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_carrot", "weight": 500, 
-   "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:carrotonastick", "weight": 50, 
-   "functions": [ { "function": "set_count", "count": { "min": 2, "max": 4 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:fishing_rod", "weight": 50, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -402,7 +396,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond_axe", "weight": 50, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_axe", "weight": 50, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -414,7 +408,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond_hoe", "weight": 50, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_hoe", "weight": 50, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -429,7 +423,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond_pickaxe", "weight": 50, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_pickaxe", "weight": 50, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -444,7 +438,7 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond_shovel", "weight": 50, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_shovel", "weight": 50, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
@@ -477,7 +471,10 @@
    ]
   },
   {"type": "item", "name": "minecraft:diamond_sword", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [
+     { "function": "set_count", "count": { "min": 1, "max": 1 } } ,
+     { "function": "enchant_randomly" }
+   ]
   },
   {"type": "item", "name": "minecraft:golden_sword", "weight": 600, 
    "functions": [
@@ -510,16 +507,22 @@
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond_boots", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:diamond_chestplate", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [
+     { "function": "set_count", "count": { "min": 1, "max": 1 } } ,
+     { "function": "enchant_randomly" }
+   ]
   },
   {"type": "item", "name": "minecraft:diamond_helmet", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [
+     { "function": "set_count", "count": { "min": 1, "max": 1 } } ,
+     { "function": "enchant_randomly" }
+   ]
   },
   {"type": "item", "name": "minecraft:diamond_leggings", "weight": 600, 
-   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
+   "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]
   },
   {"type": "item", "name": "minecraft:golden_boots", "weight": 600, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 4 } } ]

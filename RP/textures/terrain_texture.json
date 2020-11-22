@@ -6,6 +6,9 @@
   "texture_data": {
     "lucky": {
       "textures": "textures/blocks/lucky"
+    },
+    "ronoaldo": {
+      "textures": "textures/blocks/ronoaldo"
     }
   }
 }

@@ -7,5 +7,9 @@
   "rono:lucky": {
     "textures": "lucky",
     "sound": "glass"
+  },
+  "rono:test": {
+    "textures": "ronoaldo",
+    "sound": "glass"
   }
 }
