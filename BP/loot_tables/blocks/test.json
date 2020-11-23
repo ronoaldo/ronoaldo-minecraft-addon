@@ -151,6 +151,7 @@
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:armor_stand" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:elytra" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:trident" } ] }, 
+ { "rolls": 1, "entries": [ { "type": "item", "name": "rono:rono_sword" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:arrow" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:wooden_sword" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:stone_sword" } ] }, 

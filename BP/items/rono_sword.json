@@ -1,0 +1,37 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "rono:rono_sword",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "minecraft:use_duration": 3600,
+            "minecraft:can_destroy_in_creative": false,
+            "minecraft:icon": {
+                "texture": "rono_sword"
+            },
+            "minecraft:damageable": {
+                "max_damage": 2500,
+                "repair_items": [
+                    "minecraft:diamond",
+                    "minecraft:diamond_sword"
+                ]
+            },
+            "minecraft:mining_speed": 1.5,
+            "minecraft:damage": 2500,
+            "minecraft:attack_damage": {
+                "value": 2500
+            },
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "sword"
+            },
+            "minecraft:display_name": {
+                "value": "Rono Sword"
+            } 
+        }
+    }
+}
