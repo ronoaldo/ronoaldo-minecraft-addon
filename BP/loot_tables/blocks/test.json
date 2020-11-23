@@ -178,6 +178,6 @@
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:leather_chestplate" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:leather_helmet" } ] }, 
  { "rolls": 1, "entries": [ { "type": "item", "name": "minecraft:leather_leggings" } ] }, 
- { "rolls": 1, "entries": [ { "type": "item", "name": "rono:lucky" } ] }
+ { "rolls": 1, "entries": [ { "type": "item", "name": "rono:lucky" } ] },
  { "rolls": 1, "entries": [ { "type": "item", "name": "rono:test" } ] }
 ] }
