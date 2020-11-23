@@ -17,13 +17,13 @@
                 "max_damage": 2500,
                 "repair_items": [
                     "minecraft:diamond",
-                    "minecraft:diamond_sword"
+                    "rono:rono_sword"
                 ]
             },
             "minecraft:mining_speed": 1.5,
             "minecraft:damage": 2500,
             "minecraft:attack_damage": {
-                "value": 2500
+                "value": 100
             },
             "minecraft:enchantable": {
                 "value": 10,
@@ -32,7 +32,7 @@
             "minecraft:display_name": {
                 "value": "Rono Sword"
             },
-	    "minecraft:weapon": {}
+            "minecraft:weapon": {}
         }
     }
 }
