@@ -31,7 +31,8 @@
             },
             "minecraft:display_name": {
                 "value": "Rono Sword"
-            } 
+            },
+	    "minecraft:weapon": {}
         }
     }
 }
