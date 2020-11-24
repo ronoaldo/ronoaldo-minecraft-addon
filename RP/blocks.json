@@ -1,9 +1,5 @@
 {
-  "format_version": [
-    1,
-    1,
-    0
-  ],
+  "format_version": [1, 1, 0],
   "rono:lucky": {
     "textures": "lucky",
     "sound": "glass"

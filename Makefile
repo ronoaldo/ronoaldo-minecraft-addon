@@ -1,5 +1,5 @@
-PACKAGE=ronoaldo
-VERSION=1.3.0
+PACKAGE = ronoaldo
+VERSION:= $(shell cat VERSION.txt)
 
 LUCKY_LOOT_CSV=BP/loot_tables/blocks/lucky.csv
 LUCKY_LOOT=BP/loot_tables/blocks/lucky.json
@@ -46,3 +46,11 @@ TERMUX_HOST := 192.168.15.16
 push-to-termux: build
 	rsync -avz BP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_behavior_packs/BP/
 	rsync -avz RP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_resource_packs/RP/
+
+release-build:
+	cat VERSION.txt | tr '.' ' ' | (read major minor build ;\
+	build=$$(( build+1 )) ;\
+	sed -e "s/.[0-9]\+$$/.$$build/" -i VERSION.txt ;\
+	for m in RP/manifest.json BP/manifest.json; do\
+		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build];g" -i $$m ;\
+	done)
