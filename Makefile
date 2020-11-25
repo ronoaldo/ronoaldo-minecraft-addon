@@ -62,6 +62,6 @@ release: bump-version
 	(printf "# Changelog for $$(cat VERSION.txt)\n\n" ;\
 	 git log --format="* %s" $$(git describe --tags --abbrev=0)..HEAD) > /tmp/changes.txt
 	VERSION=$$(cat VERSION.txt) ;\
-	gh release create build/ronoaldo-$$VERSION.mcaddon \
+	gh release create $$VERSION build/ronoaldo-$$VERSION.mcaddon \
 		--draft --prerelease --target main \
 		--title "Release $$VERSION" --notes-file /tmp/changes.txt
