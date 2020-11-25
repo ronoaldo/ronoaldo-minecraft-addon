@@ -57,7 +57,8 @@ bump-version:
 	git add VERSION.txt */manifest.json
 	git commit -m "Bump version to $$(cat VERSION.txt)"
 
-release: bump-version clean build
+release: bump-version
+	make build
 	(printf "# Changelog for $$(cat VERSION.txt)\n\n" ;\
 	 git log --format="* %s" $$(git describe --tags --abbrev=0)..HEAD) > /tmp/changes.txt
 	VERSION=$$(cat VERSION.txt) ;\
