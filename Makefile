@@ -54,6 +54,8 @@ bump-version:
 	for m in RP/manifest.json BP/manifest.json; do\
 		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build];g" -i $$m ;\
 	done)
+	git add VERSION.txt */manifest.json
+	git commit -m "Bump version to $$(cat VERSION.txt)
 
 release: bump-version clean build
 	(printf "# Changelog for $$(cat VERSION.txt)\n\n" ;\
