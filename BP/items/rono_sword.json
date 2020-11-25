@@ -3,6 +3,7 @@
     "minecraft:item": {
         "description": {
             "identifier": "rono:rono_sword",
+            "is_experimental": false,
             "category": "Equipment"
         },
         "components": {

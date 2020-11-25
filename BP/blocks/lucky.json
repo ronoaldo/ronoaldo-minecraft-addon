@@ -3,7 +3,7 @@
     "minecraft:block": {
         "description": {
             "identifier": "rono:lucky",
-            "is_experimental": true,
+            "is_experimental": false,
             "register_to_creative_menu": true
         },
         "components": {
