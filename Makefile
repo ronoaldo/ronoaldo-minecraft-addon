@@ -54,3 +54,11 @@ bump-version:
 	for m in RP/manifest.json BP/manifest.json; do\
 		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build];g" -i $$m ;\
 	done)
+
+release: bump-version clean build
+	(printf "# Changelog for $$(cat VERSION.txt)\n\n" ;\
+	 git log --format="* %s" $$(git describe --tags --abbrev=0)..HEAD) > /tmp/changes.txt
+	VERSION=$$(cat VERSION.txt) ;\
+	gh release create build/ronoaldo-$$VERSION.mcaddon \
+		--draft --prerelease --target main \
+		--title "Release $$VERSION" --notes-file /tmp/changes.txt
