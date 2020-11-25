@@ -47,7 +47,7 @@ push-to-termux: build
 	rsync -avz BP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_behavior_packs/BP/
 	rsync -avz RP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_resource_packs/RP/
 
-release-build:
+bump-version:
 	cat VERSION.txt | tr '.' ' ' | (read major minor build ;\
 	build=$$(( build+1 )) ;\
 	sed -e "s/.[0-9]\+$$/.$$build/" -i VERSION.txt ;\
