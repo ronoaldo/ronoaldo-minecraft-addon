@@ -60,7 +60,9 @@ bump-version:
 release: bump-version
 	make build
 	(printf "# Changelog for $$(cat VERSION.txt)\n\n" ;\
-	 git log --format="* %s" $$(git describe --tags --abbrev=0)..HEAD) > /tmp/changes.txt
+	 git log --format="* %s" $$(git describe --tags --abbrev=0)..HEAD |\
+	 grep -v "Bump version") > /tmp/changes.txt
+	cat /tmp/changes.txt
 	VERSION=$$(cat VERSION.txt) ;\
 	gh release create $$VERSION build/ronoaldo-$$VERSION.mcaddon \
 		--draft --prerelease --target main \
