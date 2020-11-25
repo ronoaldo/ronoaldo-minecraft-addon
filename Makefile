@@ -52,7 +52,7 @@ bump-version:
 	build=$$(( build+1 )) ;\
 	sed -e "s/.[0-9]\+$$/.$$build/" -i VERSION.txt ;\
 	for m in RP/manifest.json BP/manifest.json; do\
-		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build];g" -i $$m ;\
+		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build],;g" -i $$m ;\
 	done)
 	git add VERSION.txt */manifest.json
 	git commit -m "Bump version to $$(cat VERSION.txt)"
