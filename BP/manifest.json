@@ -4,13 +4,13 @@
         "name": "Ronoaldo Behavior Pack",
         "description": "Ronoaldo sample mod pack - Behavior",
         "uuid": "06f384ff-4635-4b1c-9317-fc6d9a1497aa",
-        "version": [1, 3, 16],
+        "version": [1, 3, 17],
         "min_engine_version": [1, 16, 0]
     },
     "modules": [
         {
             "uuid": "62a4f713-0070-4273-aade-d976a94d31a0",
-            "version": [1, 3, 16],
+            "version": [1, 3, 17],
             "type": "data"
         }
     ]
