@@ -61,9 +61,10 @@ release: bump-version
 	make build
 	(printf "# Changelog for $$(cat VERSION.txt)\n\n" ;\
 	 git log --format="* %s" $$(git describe --tags --abbrev=0)..HEAD |\
-	 grep -v "Bump version") > /tmp/changes.txt
+	 grep -v "Bump version" || true) > /tmp/changes.txt
 	cat /tmp/changes.txt
+	git push
 	VERSION=$$(cat VERSION.txt) ;\
 	gh release create $$VERSION build/ronoaldo-$$VERSION.mcaddon \
-		--draft --prerelease --target main \
+		--draft --prerelease --target $$(git rev-parse HEAD) \
 		--title "Release $$VERSION" --notes-file /tmp/changes.txt
