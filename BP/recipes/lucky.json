@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "rono:lucky_block_recipe"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            " I ",
+            "IFI",
+            " I "
+        ],
+        "key": {
+            "F": {
+                "item": "minecraft:flint"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": {
+            "item": "rono:lucky"
+        }
+    }
+}
