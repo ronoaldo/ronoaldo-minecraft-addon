@@ -4,13 +4,13 @@
         "name": "Ronoaldo Resource Pack",
         "description": "Ronoaldo sample mod pack - Resources.",
         "uuid": "a08e6e85-2439-4b9a-a8da-de976576aef6",
-        "version": [1, 3, 17],
+        "version": [1, 3, 18],
         "min_engine_version": [1, 16, 0]
     },
     "modules": [
         {
             "uuid": "bf42e32b-07d8-4476-bc6f-9696e0a120ed",
-            "version": [1, 3, 17],
+            "version": [1, 3, 18],
             "type": "resources"
         }
     ]

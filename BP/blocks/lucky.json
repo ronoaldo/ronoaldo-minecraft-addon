@@ -1,5 +1,5 @@
 {
-    "format_version": "1.12.0",
+    "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
             "identifier": "rono:lucky",
@@ -7,7 +7,7 @@
             "register_to_creative_menu": true
         },
         "components": {
-            "minecraft:loot": "loot_tables/blocks/lucky.json",
+            "minecraft:loot": "loot_tables/blocks/empty.json",
             "minecraft:destroy_time": 0.6,
             "minecraft:explosion_resistance": 3,
             "minecraft:friction": 0.6,
@@ -17,7 +17,20 @@
             },
             "minecraft:map_color": "#ffffff",
             "minecraft:block_light_absorption": 0,
-            "minecraft:block_light_emission": 0.9 
+            "minecraft:block_light_emission": 0.9,
+            "minecraft:on_player_destroyed": {
+                "event": "on_player_destroyed_event"
+            }
+        },
+        "events": {
+            "on_player_destroyed_event": {
+                "spawn_loot": {
+                    "table": "loot_tables/blocks/lucky.json"
+                },
+                "run_command": {
+                    "command": "function rono/hatch"
+                }
+            }
         }
     }
 }
