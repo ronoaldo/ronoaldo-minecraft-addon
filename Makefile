@@ -58,7 +58,7 @@ bump-version:
 		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build],;g" -i $$m ;\
 	done)
 	git add VERSION.txt */manifest.json
-	git VERSION.txt commit -m "Bump version to $$(cat VERSION.txt)"
+	git commit -m "Bump version to $$(cat VERSION.txt)" VERSION.txt */manifest.json
 
 ## release: perform all steps to release the current workspace as a new version
 release: bump-version
