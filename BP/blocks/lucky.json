@@ -7,7 +7,7 @@
             "register_to_creative_menu": true
         },
         "components": {
-            "minecraft:loot": "loot_tables/blocks/empty.json",
+            "minecraft:loot": "loot_tables/rono/empty.loot.json",
             "minecraft:destroy_time": 0.6,
             "minecraft:explosion_resistance": 3,
             "minecraft:friction": 0.6,
@@ -25,10 +25,13 @@
         "events": {
             "on_player_destroyed_event": {
                 "spawn_loot": {
-                    "table": "loot_tables/blocks/lucky.json"
+                    "table": "loot_tables/rono/lucky.loot.json"
                 },
                 "run_command": {
-                    "command": "function rono/hatch"
+                    "command": [
+                        "function rono/hatch",
+                        "function rono/cleanup"
+                    ]
                 }
             }
         }
