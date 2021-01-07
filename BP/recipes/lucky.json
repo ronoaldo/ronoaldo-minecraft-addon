@@ -6,9 +6,9 @@
         },
         "tags": ["crafting_table"],
         "pattern": [
-            " I ",
+            "III",
             "IFI",
-            " I "
+            "III"
         ],
         "key": {
             "F": {
