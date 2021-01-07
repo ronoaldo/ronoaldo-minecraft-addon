@@ -19,20 +19,37 @@
             "minecraft:block_light_absorption": 0,
             "minecraft:block_light_emission": 0.9,
             "minecraft:on_player_destroyed": {
-                "event": "on_player_destroyed_event"
+                "event": "rono:randomize_loot"
             }
         },
         "events": {
-            "on_player_destroyed_event": {
-                "spawn_loot": {
-                    "table": "loot_tables/rono/lucky.loot.json"
-                },
-                "run_command": {
-                    "command": [
-                        "function rono/hatch",
-                        "function rono/cleanup"
-                    ]
-                }
+            "rono:randomize_loot": {
+                "randomize": [
+                    {
+                        "weight": 75,
+                        "spawn_loot": {
+                            "table": "loot_tables/rono/lucky.loot.json"
+                        }
+                    },
+                    {
+                        "weight": 5,
+                        "run_command": {
+                            "command": "summon minecraft:creeper \"Bad Luck!\""
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "run_command": {
+                            "command": "summon minecraft:zombie \"Bad Luck!\""
+                        }
+                    },
+                    {
+                        "weight": 10,
+                        "run_command": {
+                            "command": "summon minecraft:skeleton \"Bad Luck!\""
+                        }
+                    }
+                ]
             }
         }
     }

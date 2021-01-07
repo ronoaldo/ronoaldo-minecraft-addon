@@ -584,12 +584,5 @@
   {"type": "item", "name": "minecraft:leather_leggings", "weight": 600, 
    "functions": [ { "function": "set_count", "count": { "min": 1, "max": 1 } } ]
   },
-    { "type": "item",
-      "name": "minecraft:egg",
-      "weight": 1000,
-      "functions": [{"function": "set_name", "name": "hatch_creeper" }] },
-    { "type": "item",
-      "name": "minecraft:egg",
-      "weight": 1000,
-      "functions": [{"function": "set_name", "name": "hatch_zombie" }] },  {"type": "empty", "weight": 1}
+  {"type": "empty", "weight": 1}
 ] } ] }
