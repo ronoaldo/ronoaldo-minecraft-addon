@@ -7,10 +7,10 @@ LUCKY_LOOT_CSV=BP/loot_tables/rono/lucky.odds.csv
 LUCKY_LOOT=BP/loot_tables/rono/lucky.loot.json
 
 # Used for TERMUX only
-TERMUX_DIR  := /data/data/com.termux/files/home/storage/shared/games/com.mojang
-TERMUX_USER := user
-TERMUX_PORT := 8022
-TERMUX_HOST := 192.168.15.16
+TERMUX_DIR  ?= /data/data/com.termux/files/home/storage/shared/games/com.mojang
+TERMUX_USER ?= user
+TERMUX_PORT ?= 8022
+TERMUX_HOST ?= 192.168.15.16
 
 ## help: show this help menu
 help:
@@ -40,7 +40,6 @@ $(LUCKY_LOOT): $(LUCKY_LOOT_CSV) $(TEST_LOOT)
 		esac; \
 		echo '  },' >> $(LUCKY_LOOT) ;\
 	done
-	cat  BP/loot_tables/rono/mobs.loot.json_fragment >> $(LUCKY_LOOT) 
 	echo '  {"type": "empty", "weight": 1}' >> $(LUCKY_LOOT)
 	echo "] } ] }" >> $(LUCKY_LOOT)
 
