@@ -46,8 +46,8 @@ $(LUCKY_LOOT): $(LUCKY_LOOT_CSV) $(TEST_LOOT)
 
 ## push-to-termux: helper to test the plugin sending data to the android device via Termux app sshd
 push-to-termux: build
-	rsync -avz BP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_behavior_packs/BP/
-	rsync -avz RP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_resource_packs/RP/
+	rsync -avz --no-p --no-t BP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_behavior_packs/BP/
+	rsync -avz --no-p --no-t RP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_resource_packs/RP/
 
 ## bump-version: increments and commits the VERSION.txt file
 bump-version:
