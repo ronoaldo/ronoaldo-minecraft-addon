@@ -30,7 +30,7 @@ $(LUCKY_LOOT): $(LUCKY_LOOT_CSV) $(TEST_LOOT)
 	cat $(LUCKY_LOOT_CSV) | tr ',' ' ' | grep -v ^category | while read cat name chance perc ; do\
 		echo "  {\"type\": \"item\", \"name\": \"$$name\", \"weight\": $$chance, " >> $(LUCKY_LOOT);\
 		case $$name in \
-			*sword*|*helmet*|*chestplate*|*leggins*) \
+			*sword*|*helmet*|*chestplate*|*leggings*) \
 				echo '   "functions": [' >> $(LUCKY_LOOT) ;\
 				echo '     { "function": "set_count", "count": { "min": 1, "max": 1 } } ,' >> $(LUCKY_LOOT) ;\
 				echo '     { "function": "enchant_randomly" }' >> $(LUCKY_LOOT) ;\
@@ -42,6 +42,8 @@ $(LUCKY_LOOT): $(LUCKY_LOOT_CSV) $(TEST_LOOT)
 	done
 	echo '  {"type": "empty", "weight": 1}' >> $(LUCKY_LOOT)
 	echo "] } ] }" >> $(LUCKY_LOOT)
+	python -m json.tool < $(LUCKY_LOOT) > $(LUCKY_LOOT).tmp
+	mv $(LUCKY_LOOT).tmp $(LUCKY_LOOT)
 
 
 ## push-to-termux: helper to test the plugin sending data to the android device via Termux app sshd

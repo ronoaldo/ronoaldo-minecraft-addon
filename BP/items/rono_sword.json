@@ -6,6 +6,7 @@
             "category": "Equipment"
         },
         "components": {
+            "minecraft:weapon": {},
             "minecraft:max_stack_size": 1,
             "minecraft:hand_equipped": true,
             "minecraft:use_duration": 3600,
@@ -28,8 +29,7 @@
             },
             "minecraft:display_name": {
                 "value": "Rono Sword"
-            },
-            "minecraft:weapon": {}
+            }
         }
     }
 }
