@@ -1,10 +1,14 @@
 # Packate name and setup 
-PACKAGE = ronoaldo
+PACKAGE = Ronoaldo
 VERSION:= $(shell cat VERSION.txt)
 
+# Folders
+BP=development_behavior_packs/$(PACKAGE)BP
+RP=development_resource_packs/$(PACKAGE)RP
+
 # Generated files
-LUCKY_LOOT_CSV=BP/loot_tables/rono/lucky.odds.csv
-LUCKY_LOOT=BP/loot_tables/rono/lucky.loot.json
+LUCKY_LOOT_CSV=$(BP)/loot_tables/rono/lucky.odds.csv
+LUCKY_LOOT=$(BP)/loot_tables/rono/lucky.loot.json
 
 # Used for TERMUX only
 TERMUX_DIR  ?= /data/data/com.termux/files/home/storage/shared/games/com.mojang
@@ -18,13 +22,16 @@ help:
 
 ## build: clean up the data and build the .mcaddon file
 build: clean $(LUCKY_LOOT)
-	zip -qr build/$(PACKAGE)-$(VERSION).mcaddon RP BP
+	mkdir -p build/pack
+	cp -r $(RP) $(BP) build/pack
+	cd build/pack ;\
+		zip -x '*.xcf' -x '*.csv' -qr ../$(PACKAGE)-$(VERSION).mcaddon .
 
 ## clean: removes any generated file, including the computed loot tables and addon files
 clean:
-	rm -vf build/* $(LUCKY_LOOT) $(TEST_LOOT)
+	rm -rvf build/pack/* $(LUCKY_LOOT) $(TEST_LOOT)
 
-## BP/loot_tables/rono/lucky.loot.json: assembles lucky block loot tables
+## RonoaldoBP/loot_tables/rono/lucky.loot.json: assembles lucky block loot tables
 $(LUCKY_LOOT): $(LUCKY_LOOT_CSV) $(TEST_LOOT)
 	echo '{ "pools": [ { "rolls": 1, "entries": [' > $(LUCKY_LOOT)
 	cat $(LUCKY_LOOT_CSV) | tr ',' ' ' | grep -v ^category | while read cat name chance perc ; do\
@@ -42,25 +49,25 @@ $(LUCKY_LOOT): $(LUCKY_LOOT_CSV) $(TEST_LOOT)
 	done
 	echo '  {"type": "empty", "weight": 1}' >> $(LUCKY_LOOT)
 	echo "] } ] }" >> $(LUCKY_LOOT)
-	python -m json.tool < $(LUCKY_LOOT) > $(LUCKY_LOOT).tmp
+	jq --indent 4 '.' < $(LUCKY_LOOT) > $(LUCKY_LOOT).tmp
 	mv $(LUCKY_LOOT).tmp $(LUCKY_LOOT)
 
 
 ## push-to-termux: helper to test the plugin sending data to the android device via Termux app sshd
 push-to-termux: build
-	rsync -avz --no-p --no-t BP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_behavior_packs/BP/
-	rsync -avz --no-p --no-t RP/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/development_resource_packs/RP/
+	rsync -avz --no-p --no-t $(BP)/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/$(BP)
+	rsync -avz --no-p --no-t $(RP)/ -e "ssh -p $(TERMUX_PORT)" $(TERMUX_USER)@$(TERMUX_HOST):$(TERMUX_DIR)/$(RP)
 
 ## bump-version: increments and commits the VERSION.txt file
 bump-version:
 	cat VERSION.txt | tr '.' ' ' | (read major minor build ;\
 	build=$$(( build+1 )) ;\
 	sed -e "s/.[0-9]\+$$/.$$build/" -i VERSION.txt ;\
-	for m in RP/manifest.json BP/manifest.json; do\
+	for m in $(BP)/manifest.json $(RP)/manifest.json; do\
 		sed -e "s;\"version\": \[.*;\"version\": [$$major, $$minor, $$build],;g" -i $$m ;\
 	done)
-	git add VERSION.txt */manifest.json
-	git commit -m "Bump version to $$(cat VERSION.txt)" VERSION.txt */manifest.json
+	git add VERSION.txt */*/manifest.json
+	git commit -m "Bump version to $$(cat VERSION.txt)" VERSION.txt */*/manifest.json
 
 ## release: perform all steps to release the current workspace as a new version
 release: bump-version
@@ -71,6 +78,6 @@ release: bump-version
 	cat /tmp/changes.txt
 	git push
 	VERSION=$$(cat VERSION.txt) ;\
-	gh release create $$VERSION build/ronoaldo-$$VERSION.mcaddon \
+	gh release create $$VERSION build/$(PACKAGE)-$$VERSION.mcaddon \
 		--draft --prerelease --target $$(git rev-parse HEAD) \
 		--title "Release $$VERSION" --notes-file /tmp/changes.txt

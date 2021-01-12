@@ -28,11 +28,11 @@ Zombie, Skeleton or even a Creeper.
 The most notable item added is the Lucky Block, and you can craft one with
 the recipe bellow:
 
-Recipe     |            | &nbsp;
------------|------------|------------
-Iron ingot | Iron ingot | Iron ingot
-Iron ingot | Flit       | Iron ingot
-Iron ingot | Iron ingot | Iron ingot
+|                                          |                                          |                                          |
+|:----------------------------------------:|:----------------------------------------:|:----------------------------------------:|
+| ![Iron ingot](src/images/iron_ingot.png) | ![Iron ingot](src/images/iron_ingot.png) | ![Iron ingot](src/images/iron_ingot.png) |
+| ![Iron ingot](src/images/iron_ingot.png) |    ![Flint](src/images/flint.png)        | ![Iron ingot](src/images/iron_ingot.png) |
+| ![Iron ingot](src/images/iron_ingot.png) | ![Iron ingot](src/images/iron_ingot.png) | ![Iron ingot](src/images/iron_ingot.png) |
 
 ### ![Rono Sword](RP/textures/items/rono_sword.png) Rono Sword
 

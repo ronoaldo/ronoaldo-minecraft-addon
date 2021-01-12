@@ -1,1 +1,10 @@
 build/
+*.dat
+behavior_packs/
+logs/
+minecraftWorlds/
+minecraftpe/
+resource_packs/
+skin_packs/
+world_templates/
+xal/
