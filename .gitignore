@@ -1,4 +1,7 @@
+# Build artifacts (auto-generated)
 build/
+
+# com.mojang files
 *.dat
 behavior_packs/
 logs/
@@ -8,3 +11,4 @@ resource_packs/
 skin_packs/
 world_templates/
 xal/
+.nomedia

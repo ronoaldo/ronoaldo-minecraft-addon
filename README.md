@@ -1,6 +1,6 @@
 # Ronoaldo Minecraft Add-on 
 
-![Ronoaldo Addon](RP/pack_icon.png)
+![Ronoaldo Addon](development_resource_packs/RonoaldoRP/pack_icon.png)
 
 Add-on for Minecraft made with my kids! This is my first Minecraft Bedrock
 Add-on project so the learning curve was quite hard. Thankfuly, with the help
@@ -23,7 +23,7 @@ Zombie, Skeleton or even a Creeper.
 
 ## New items
 
-### ![Lucky Block](RP/textures/blocks/ronoaldo.png) Lucky Block 
+### ![Lucky Block](development_resource_packs/RonoaldoRP/textures/blocks/ronoaldo.png) Lucky Block 
 
 The most notable item added is the Lucky Block, and you can craft one with
 the recipe bellow:
@@ -34,7 +34,7 @@ the recipe bellow:
 | ![Iron ingot](src/images/iron_ingot.png) |    ![Flint](src/images/flint.png)        | ![Iron ingot](src/images/iron_ingot.png) |
 | ![Iron ingot](src/images/iron_ingot.png) | ![Iron ingot](src/images/iron_ingot.png) | ![Iron ingot](src/images/iron_ingot.png) |
 
-### ![Rono Sword](RP/textures/items/rono_sword.png) Rono Sword
+### ![Rono Sword](development_resource_packs/RonoaldoRP/textures/items/rono_sword.png) Rono Sword
 
 This mod also adds a new item, the legendary `Rono Sword`. This one is only
 available as a drop from the `Lucky Block`, since it has no recipe for

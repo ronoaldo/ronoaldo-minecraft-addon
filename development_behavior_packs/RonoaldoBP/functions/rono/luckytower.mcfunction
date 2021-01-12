@@ -1,3 +1,3 @@
 # rono/luckytower: spawns a lucky block tower close to the calling player.
-fill ~3 ~ ~3 ~5 ~5 ~5 rono:lucky
+fill   ~1 ~ ~1   ~3 ~5 ~3   rono:lucky 0 hollow
 say "Lucky Tower Created"

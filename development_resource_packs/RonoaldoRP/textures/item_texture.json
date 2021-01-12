@@ -4,6 +4,9 @@
 	"texture_data": {
 		"rono_sword": {
 			"textures": "textures/items/rono_sword"
+		},
+		"rono_ingot": {
+		    "textures": "textures/items/rono_ingot"
 		}
 	}
 }
